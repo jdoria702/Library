@@ -10,75 +10,6 @@
   <body>
     <h1>My Book Log!</h1>
     <div class="grid-container">
-      <div class="card">
-        <div class="book_ID">
-          <p>#123</p>
-        </div>
-        <div class="book_title">
-          <p>TITLE</p>
-        </div>
-        <div class="book_author">
-          <p>AUTHOR</p>
-        </div>
-        <div class="book_year">
-          <p>YEAR</p>
-        </div>
-        <div class="book_pageCount">
-          <p>PAGECOUNT</p>
-        </div>
-        <div class="book_hasRead">
-          <p>Completed:</p>
-          <input type="checkbox" class="checkmark" />
-        </div>
-        <button class="book_remove">X</button>
-      </div>
-
-      <div class="card">
-        <div class="book_ID">
-          <p>#123</p>
-        </div>
-        <div class="book_title">
-          <p>TITLE</p>
-        </div>
-        <div class="book_author">
-          <p>AUTHOR</p>
-        </div>
-        <div class="book_year">
-          <p>YEAR</p>
-        </div>
-        <div class="book_pageCount">
-          <p>PAGECOUNT</p>
-        </div>
-        <div class="book_hasRead">
-          <p>Completed:</p>
-          <input type="checkbox" class="checkmark" />
-        </div>
-        <button class="book_remove">X</button>
-      </div>
-
-      <div class="card">
-        <div class="book_ID">
-          <p>#123</p>
-        </div>
-        <div class="book_title">
-          <p>TITLEEEEEEEEEEEEEEEEEEEE</p>
-        </div>
-        <div class="book_author">
-          <p>AUTHOR</p>
-        </div>
-        <div class="book_year">
-          <p>YEAR</p>
-        </div>
-        <div class="book_pageCount">
-          <p>PAGECOUNT</p>
-        </div>
-        <div class="book_hasRead">
-          <p>Completed:</p>
-          <input type="checkbox" class="checkmark" />
-        </div>
-        <button class="book_remove">X</button>
-      </div>
-
       <div class="book_add card" id="show-dialog">
         <button class="add_button">+</button>
       </div>
@@ -86,30 +17,44 @@
   </body>
 </html>
 
-<dialog id="dialog" closeby="any">
+<dialog id="dialog" closedby="any">
   <form method="dialog">
     <h1>Add To The List!</h1>
-    <p>
-      <label for="title"> Book Title:</label>
-      <input type="text" id="title" placeholder="Harry Potter. . ." required />
+    <div>
+      <label for="title">Book Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Harry Potter..."
+        required
+      />
 
       <label for="author">Author:</label>
-      <input type="text" id="author" placeholder="J.K. Rowling. . ." required />
+      <input
+        type="text"
+        id="author"
+        name="author"
+        placeholder="J.K. Rowling..."
+        required
+      />
 
       <label for="year">Year:</label>
-      <input type="text" id="bookTitle" placeholder="1998. . ." required />
+      <input type="date" id="year" name="year" placeholder="1998..." required />
 
       <label for="page_count">Page Count:</label>
       <input
         type="number"
         id="page_count"
-        placeholder="Title of Book"
+        name="page_count"
+        placeholder="345"
         required
         min="1"
       />
+      <br /><br />
 
-      <span>Done Reading?</span>
-      <label for="finished">Yes</label>
+      <span>Done Reading?</span><br /><br />
+
       <input
         type="radio"
         id="finished"
@@ -117,8 +62,8 @@
         value="true"
         required
       />
+      <label for="finished">Yes</label>
 
-      <label for="not_finished">No</label>
       <input
         type="radio"
         id="not_finished"
@@ -126,7 +71,12 @@
         value="false"
         required
       />
-    </p>
+      <label for="not_finished">No</label>
+
+      <br /><br />
+      <button type="submit" class="submit">Submit</button>
+      <button type="button" class="close">Cancel</button>
+    </div>
   </form>
 </dialog>
 
