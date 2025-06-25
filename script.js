@@ -20,3 +20,9 @@ addBookToLibrary(crypto.randomUUID, "A", "B", "2025", "5", true);
 addBookToLibrary(crypto.randomUUID, "C", "D", "2024", "55", false);
 addBookToLibrary(crypto.randomUUID, "E", "F", "2023", "555", true);
 console.log(myLibrary);
+
+const showBtn = document.getElementById("show-dialog");
+
+showBtn.addEventListener("click", () => {
+  dialog.showModal();
+});

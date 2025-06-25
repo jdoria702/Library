@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My Book Log</title>
   </head>
   <body>
     <h1>My Book Log!</h1>
@@ -78,9 +79,55 @@
         <button class="book_remove">X</button>
       </div>
 
-      <div class="book_add card">
+      <div class="book_add card" id="show-dialog">
         <button class="add_button">+</button>
       </div>
     </div>
   </body>
 </html>
+
+<dialog id="dialog" closeby="any">
+  <form method="dialog">
+    <h1>Add To The List!</h1>
+    <p>
+      <label for="title"> Book Title:</label>
+      <input type="text" id="title" placeholder="Harry Potter. . ." required />
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" placeholder="J.K. Rowling. . ." required />
+
+      <label for="year">Year:</label>
+      <input type="text" id="bookTitle" placeholder="1998. . ." required />
+
+      <label for="page_count">Page Count:</label>
+      <input
+        type="number"
+        id="page_count"
+        placeholder="Title of Book"
+        required
+        min="1"
+      />
+
+      <span>Done Reading?</span>
+      <label for="finished">Yes</label>
+      <input
+        type="radio"
+        id="finished"
+        name="completion_status"
+        value="true"
+        required
+      />
+
+      <label for="not_finished">No</label>
+      <input
+        type="radio"
+        id="not_finished"
+        name="completion_status"
+        value="false"
+        required
+      />
+    </p>
+  </form>
+</dialog>
+
+<output></output>
